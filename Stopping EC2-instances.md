@@ -64,7 +64,7 @@ Allows AWS Lambda to assume the role.
 }
 ```
 ### IAM Policy – Stop EC2 Instances
-```
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -80,7 +80,7 @@ Allows AWS Lambda to assume the role.
 }
 ```
 ### IAM Policy – Start EC2 Instances
-```
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -98,7 +98,7 @@ Allows AWS Lambda to assume the role.
 ---
 
 ## Lambda Function – Stop EC2 Instances
-```
+```json
 import boto3
 
 region = 'ap-south-1'
@@ -111,7 +111,7 @@ def lambda_handler(event, context):
     print("Stopped instances:", instances)
 ```
 ## Lambda Function – Start EC2 Instances
-```
+```json
 import boto3
 
 region = 'ap-south-1'
