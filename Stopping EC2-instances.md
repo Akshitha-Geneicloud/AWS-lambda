@@ -62,7 +62,9 @@ Allows AWS Lambda to assume the role.
     }
   ]
 }
+```
 ### IAM Policy – Stop EC2 Instances
+```
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -76,8 +78,9 @@ Allows AWS Lambda to assume the role.
     }
   ]
 }
-
+```
 ### IAM Policy – Start EC2 Instances
+```
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -91,10 +94,11 @@ Allows AWS Lambda to assume the role.
     }
   ]
 }
-
+```
 ---
 
 ## Lambda Function – Stop EC2 Instances
+```
 import boto3
 
 region = 'ap-south-1'
@@ -105,8 +109,9 @@ ec2 = boto3.client('ec2', region_name=region)
 def lambda_handler(event, context):
     ec2.stop_instances(InstanceIds=instances)
     print("Stopped instances:", instances)
-
+```
 ## Lambda Function – Start EC2 Instances
+```
 import boto3
 
 region = 'ap-south-1'
@@ -117,7 +122,7 @@ ec2 = boto3.client('ec2', region_name=region)
 def lambda_handler(event, context):
     ec2.start_instances(InstanceIds=instances)
     print("Started instances:", instances)
-
+```
 ## Scheduling with Amazon EventBridge
 ### Stop Schedule (Night)
 
