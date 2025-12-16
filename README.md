@@ -1,0 +1,1 @@
+This project demonstrates a real-world AWS serverless automation use case by combining Lambda, EventBridge, IAM, and SNS. It highlights how cloud-native services can be orchestrated to build secure, cost-efficient, and observable automation solutions.
